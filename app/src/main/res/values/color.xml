@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="defaultTextColor">#545454</color>
+    <color name="defaultTextColorGreen">#ff65ba46</color>
+    <color name="defaultTextColorBlue">#007aff</color>
+    <color name="defaultTextColorGray">#ff949494</color>
+    <color name="defaultTextColorGrayBlack">#ff545454</color>
+    <color name="defaultTextColorlittlepurple">#ff8f93a8</color>
+    <color name="defaultTextColorGrayHigh">#646464</color>
+    <color name="defaultBackgroundColor">#ffffff</color>
+    <color name="defaultBackgroundColorDep">#dad9d9</color>
+    <color name="defaultBackgroundColorTransparent">#55ffffff</color>
+    <color name="default_background_gray">#e8e8e8</color>
+    <color name="default_divide_gray">#d8d8d8</color>
+    <color name="default_background_orange">#fa5937</color>
+    <color name="default_detail_background">#f6f6f6</color>
+    <color name="default_gray_light">#d7d2d1</color>
+    <color name="default_background_green">#57B610</color>
+
+
+    
+    
+    
+    <!-- 便民 -->
+    <color name="convenient_grid_background">#898989</color>
+    <color name="convenient_grid_divide_background">#7c7c7c</color>
+    <color name="convenient_gridLayout_background">#f0efed</color>
+    <color name="convenient_gridLayout_divide_background">#cccccc</color>
+    
+    
+    <!-- topbar -->
+    <color name="default_top_bar_bg">#ff57b610</color>
+    
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="defaultTextColorYellow">#fb6f53</color>
+    <!-- HomePage-->
+    <color name="homeNewsDivier">#e3e2e0</color>
+    <color name="homeNewsDivier2">#e2e2e2</color>
+    <color name="homeTopBar">#65ba46</color>
+    <color name="homeNewsTextColor">#919190</color>
+    <color name="homePageBackgroudColor">#fafafa</color>
+    <color name="transparent">#50000000</color>
+    <color name="deptransparent">#a0000000</color>
+    <color name="transparent_all">#00000000</color>
+    <color name="homePageTag_text_color">#646464</color>
+     <color name="homePageTag_divid_line_color">#dedede</color>
+    
+    <!--TabHost color 
+    <color name="tabTextUnselected">#9095aa</color>
+    <color name="tabTextSelected">#65ba46</color>-->
+    <color name="tabTextUnselected">#9095aa</color>
+    <color name="tabTextSelected">#ff57b610</color>
+    <color name="tabhost_divid_line_color">#b2b2b2</color>
+    
+    <!-- 便民 -->
+    <color name="convenience_bigClassNameColor">#545454</color>
+    <color name="convenience_item_selectorBg">#ebebeb</color>   
+    <color name="convenience_item_typeAddrColor">#999999</color> 
+    <color name="convenience_item_shopNameColor">#545454</color>
+    <color name="convenience_dazhongdianpin_diliverColor">#e0e0e0</color>
+    
+    <!-- 抽奖 -->
+    <color name="lucky_tabTextUnselected">#646464</color>
+    <color name="lucky_tabTextSelected">#ff57b610</color>
+    <color name="lucky_tabHostBackground">#f5f5f5</color>
+    <color name="lucky_award_textColor">#3c3c3c</color>
+    <color name="lucky_consignee_address_background">#f0f0f0</color>
+    
+    <color name="register_sex_text_color">#ff6000</color>
+    <!-- 通知 -->
+    <color name="notice_delete_color">#fa5937</color>
+    <color name="notice_time_color">#848484</color>
+    <color name="notice_background_color">#fff2f2f2</color>
+    <color name="notice_text_color">#666666</color>
+    <color name="notice_dividline_color">#cccccc</color>
+    <color name="notice_item_title_color">#454545</color>
+    
+    
+    <!-- 生活百科 -->
+    <color name="life_defalu_gbg">#f4f4f4</color>
+    <color name="life_item_title_color">#333333</color>
+    <color name="life_item_createTimeColor">#999999</color>
+    <color name="life_item_iconLine_bg">#fafafa</color>
+    <color name="life_item_diliver_color">#e8e8e8</color>
+    <color name="life_detail_bgColor">#f6f6f6</color>
+    
+    <color name="liaotian_onLineNumber">#b6b6b6</color>
+    
+    <!-- 评论 -->
+    <color name="comment_diliver_color">#e8e8e8</color>
+    <color name="comment_title_color">#848484</color>
+    <color name="comment_content_color">#666666</color>
+    <color name="comment_publishtime_color">#999999</color>
+    <color name="comment_publish_name_color">#333333</color>
+    
+    <!-- 注册 -->
+    <color name="register_yaoqingCode_color">#666666</color>
+    <color name="login_hintTextColor">#c5c5c5</color>
+    <color name="register_dialog_bg">#676767</color>
+    
+    <!-- 找回密码 -->
+    <color name="findback_passwordTextColor">#bbbbbb</color>
+    <color name="findback_passwordYanzhengCodeBg">#b6b6b6</color>
+    <color name="findback_passwordTwoHintColor">#c4c8ce</color>
+    
+    <!-- 电话本 -->
+    <color name="phone_item_text_bg">#F2F2F2</color>
+    <color name="phone_tab_background">#f4f4f0</color>
+    <color name="phone_list_title_bg">#65ba46</color>
+    <color name="phone_item_text_color">#949494</color>
+    <color name="phone_item_divide_color">#e3e2e0</color>
+    <color name="phone_detail_text_color">#333333</color>
+    <color name="phone_detail_background">#f6f6f6</color>
+    <color name="phone_detail_line">#e8e8e8</color>
+    <color name="phone_detail_text">#646464</color>
+    <!-- 上面是首页的color -->
+    
+    <!-- 我 -->
+    <color name="user_item_divide_color">#e3e2e0</color>
+    <color name="user_item_horizontal_photo_background">#f0f0f0</color>
+    <color name="user_fragment_background_color">#f0f0f0</color>
+    <color name="user_item_text_color">#404040</color>
+    <!-- 编辑资料 -->
+    <color name="user_edit_userName_color">#646464</color>
+    <color name="user_occupation_color">#6e6e6e</color>
+    <!--个人动态圆环-->
+    <color name="user_dynamic_circle_stroke_color">#dededd</color>
+    <!--竖线-->
+    <color name="user_dynamic_line">#aaa9a9</color>
+    
+    <!-- 我的帐单 -->
+    <color name="user_bill_list_cycle_textcolor">#333333</color>
+    <color name="user_bill_list_cycle_title_bg">#f7f7f7</color>
+    <color name="user_bill_list_cycle_item_bg">#ffffff</color>
+    <color name="user_bill_list_line_bg">#ffb9b9b9</color>
+    <color name="user_bill_list_line_color">#e8e8e8</color>
+    <color name="user_bill_list_total_price_textcolor">#ff5000</color>
+    <color name="user_bill_list_item_cost_textcolor">#646464</color>
+    
+    <!-- 公交地铁 -->
+    <color name="property_bus_list_bg">#f0f0f0</color>
+    <color name="property_bug_list_title_line_color">#dddddd</color>
+    <color name="property_bug_list_title_text_color">#adadad</color>
+    <color name="property_bug_list_item_text_color">#666666</color>
+    <color name="property_bug_list_item_name_color">#333333</color>
+    <color name="property_bug_detail_title_bg">#f7f7f7</color>
+    <color name="property_bug_detail_line_bg">#dfdfdf</color>
+    
+    <!-- 拼车上下班 -->
+    <color name="neighbor_bus_item_yellow">#fdda0f</color>
+    <color name="neighbor_bus_item_blue">#0082bd</color>
+    <color name="neighbor_bus_send_background">#23282a</color>
+    
+    <!-- 拼车上下班详情 -->
+    <color name="neighbor_bus_detail_userName_color">#333333</color>
+    
+    <!-- 随手拍了卖 -->
+    <color name="photo_topview_line_bg">#c8c5c2</color>
+    
+    <!-- 刻度  选中 -->
+    <color name="scale_sel">#2A2A2A</color>
+    <!-- 刻度 未选中 -->
+    <color name="scale">#CCCCCC</color>
+
+    <!--小区商城-->
+    <color name="shop_cart_price">#f37f01</color>
+    <color name="shop_cart_text">#545454</color>
+    <color name="shop_cart_standard">#7f7f7f</color>
+
+    
+    <color name="input_view_backcolor">#f7f7f7</color>
+    <color name="input_view_textcolor">#8ecf63</color>
+    <color name="input_view_circlecolor">#7cc72b</color>
+
+    
+    
+    
+    
+    
+     <color name="sidebar_item_background_activated_dark">#ff4c365d</color>
+    <color name="common_bg">#ffe6e6e6</color>
+    <color name="text_black">#ff333333</color>
+    <color name="text_white">#ffffffff</color>
+    <color name="text_gray">#ff777777</color>
+    <color name="text_black_disabled">#80333333</color>
+    <color name="text_white_disabled">#80ffffff</color>
+    <color name="text_shadow_color">#66000000</color>
+    <color name="color_hei">#ff000000</color>
+    <color name="color_hei_8">#00000000</color>
+    <color name="color_zhonghui">#ff798089</color>
+    <color name="color_bai">#ffffffff</color>
+    <color name="color_bai_8">#ffffffff</color>
+    <color name="color_lan">#ff067bb1</color>
+    <color name="halftransparent">#aa000000</color>
+    <color name="window_bg">#00eef1f3</color>
+    <color name="title_bg">#ff54acea</color>
+    <color name="transparent2">@color/color_hei_8</color>
+    <color name="chat_background">@color/window_bg</color>
+    <color name="chat_time">@color/color_bai</color>
+    <color name="screenshot_normal">#3f000000</color>
+    <color name="screenshot_pressed">#bf000000</color>
+    <color name="qq_normal">@color/color_hei</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">@color/color_hei</color>
+    <color name="video_bg_color">#ffecf3f9</color>
+    <color name="color_divider">#ffdddddd</color>
+    <color name="sqqname">#ffee860a</color>
+    <color name="thirty_transparent_black">#4d000000</color>
+    <color name="twenty_transparent_black">#33000000</color>
+    <color name="contact_category_text">#ff454a52</color>
+    <color name="contact_category_text_focused">#ff4686b3</color>
+    <color name="sc_transparent_black">#7f000000</color>
+    <color name="sc_black">#ff000000</color>
+    <color name="sc_white">@color/color_bai_8</color>
+    <color name="sc_transparent">#00ffffff</color>
+    <color name="sc_gray">#ff777777</color>
+    <color name="sc_name">#ff5fc4ff</color>
+    <color name="sc_transparent_background">@color/color_hei_8</color>
+    <color name="tag_textview1">#ff795028</color>
+    <color name="tag_textview2">#ff4a7928</color>
+    <color name="tag_textview3">#ff284479</color>
+    <color name="link_color">#ff13679d</color>
+    <color name="info_card_qzonepic_default">#ffdedede</color>
+    <color name="action_sheet_point">#ff5f6268</color>
+    <color name="action_sheet_curr_point">#ff9fa1a4</color>
+    <color name="setting_aio_text_size_normal">#ff151617</color>
+    <color name="chat_bubble_btn_text">#ffa86700</color>
+    <color name="custom_theme_color">#66000000</color>
+    <color name="gray">#ff777777</color>
+    <color name="button_reply_normal">#ffffffff</color>
+    <color name="qzone_feeditem_sel">#fff1f1f1</color>
+    <color name="qzone_feeditem_nor">#fffafafa</color>
+
+    <drawable name="trans">@color/color_hei_8</drawable>
+
+    <item name="preview_btn_bg_press" type="drawable">#ff000000</item>
+
+    <!--小区商城新改UI -->
+    <color name="shoppingmall_background_color">#F9F9F9</color>
+    <color name="shoppingmall_discount_color">#545454</color>
+    <color name="shoppingmall_oldprice_color">#999999</color>
+    <color name="shoppingmall_price_color">#FA5000</color>
+
+</resources>

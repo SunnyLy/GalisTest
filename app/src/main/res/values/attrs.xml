@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DropOfWater">
+        <attr name="long_dp" format="dimension"/>
+        <attr name="short_dp" format="dimension"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="fill" format="boolean"/>
+        <attr name="background_color" format="color"/>
+        <attr name="tag" format="string"/>
+        <attr name="tag_text_color" format="color"/>
+        <attr name="tag_margint_top" format="dimension"/>
+        <attr name="tag_text_size" format="dimension"/>
+        <attr name="tag_drawable" format="reference"/>
+    </declare-styleable>
+</resources>
