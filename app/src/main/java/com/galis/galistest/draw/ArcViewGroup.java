@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 public class ArcViewGroup extends ViewGroup{
 
     private int mShort_DP;
+    private int mArcHeight_DP = 30;
     private RectF mArcShader;//弧形遮罩层
     private Paint mPaint;
 
@@ -31,6 +32,7 @@ public class ArcViewGroup extends ViewGroup{
         addView(water2);
         addView(new DropOfWater(context));
 
+        setBackgroundColor(Color.WHITE);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         setWillNotDraw(false);
     }
@@ -76,13 +78,18 @@ public class ArcViewGroup extends ViewGroup{
         super.onDraw(canvas);
         int screeWidth = getMeasuredWidth();
         mPaint.setColor(Color.BLACK);
-//        mPaint.setAlpha(0);
         mPaint.setStyle(Paint.Style.FILL);
-        mArcShader = new RectF(0,0,screeWidth,180);
         canvas.save();
-        canvas.translate(0,-90);
-        canvas.clipRect(0,90,screeWidth,180);
-        canvas.drawOval(mArcShader,mPaint);
+
+
+        mShort_DP = screeWidth/2;
+        int translateHeight = (int) (mArcHeight_DP*getResources().getDisplayMetrics().density);
+        long r= ((translateHeight*translateHeight+mShort_DP*mShort_DP)/2*translateHeight);
+        canvas.translate(0,mArcHeight_DP-r);
+//        canvas.clipRect(0, r-translateHeight, screeWidth, r );
+        canvas.drawCircle(mShort_DP,0,r,mPaint);
         canvas.restore();
+
+        System.out.println("------------------------");
     }
 }
