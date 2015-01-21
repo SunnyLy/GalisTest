@@ -28,7 +28,7 @@ public class ArcViewGroup extends FrameLayout{
     private boolean mIsNeedToDrawBg = false;
     private int mConstantDistance_PX;//中心点到贝塞尔曲线的距离
     private int mMaxBerizerHeight_PX;//贝塞尔曲线控制点的高度（这里用的是二分方程式，即一个控制点）
-    private int mChildWidth_PX;//贝塞尔曲线控制点的高度（这里用的是二分方程式，即一个控制点）
+    private int mChildWidth_PX;
     private int mCurrentBerizerHeight;
     private int mWidth;
     private int mHeight;
