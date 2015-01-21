@@ -1,12 +1,19 @@
 package com.galis.galistest.draw;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.RectF;
+import android.graphics.Path;
 import android.util.AttributeSet;
-import android.view.ViewGroup;
+import android.view.animation.BounceInterpolator;
+import android.widget.FrameLayout;
+
+import com.galis.galistest.R;
 
 /**
  * Author: galis
@@ -16,58 +23,118 @@ import android.view.ViewGroup;
  */
 
 
-public class ArcViewGroup extends ViewGroup{
+public class ArcViewGroup extends FrameLayout {
 
-    private int mShort_DP;
-    private int mArcHeight_DP = 30;
-    private RectF mArcShader;//弧形遮罩层
+    private boolean mIsNeedToDrawBg = false;
+    private int mConstantDistance_PX;//中心点到贝塞尔曲线的距离
+    private int mMaxBerizerHeight_PX;//贝塞尔曲线控制点的高度（这里用的是二分方程式，即一个控制点）
+    private int mChildWidth_PX;//贝塞尔曲线控制点的高度（这里用的是二分方程式，即一个控制点）
+    private int mCurrentBerizerHeight;
+    private int mWidth;
+    private int mHeight;
+    private boolean mIsRun;
+
     private Paint mPaint;
+    private Path mPath;
+    private Point2D[] mPoints2D;
+    private ValueAnimator mDragOutAnimator;
 
     public ArcViewGroup(Context context) {
-        super(context);
-        setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-        addView(new DropOfWater(context));
-        DropOfWater water2 = new DropOfWater(context);
-        water2.setmIsFill(false);
-        addView(water2);
-        addView(new DropOfWater(context));
-
-        setBackgroundColor(Color.WHITE);
-        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        setWillNotDraw(false);
+        this(context, null);
     }
 
     public ArcViewGroup(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setWillNotDraw(false);
+        setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPath = new Path();
+
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ArcViewGroup);
+        mIsNeedToDrawBg = typedArray.getBoolean(R.styleable.ArcViewGroup_is_need_draw_bg, false);
+        mConstantDistance_PX = (int) typedArray.getDimension(R.styleable.ArcViewGroup_constant_distance, 200);
+        mMaxBerizerHeight_PX = (int) typedArray.getDimension(R.styleable.ArcViewGroup_berizer_height, 60);
+        mChildWidth_PX = (int) typedArray.getDimension(R.styleable.ArcViewGroup_child_width, 60);
+
+        mCurrentBerizerHeight = 0;
+
+        mPoints2D = new Point2D[]{
+                new Point2D(0, 0),
+                new Point2D(0, 0),
+                new Point2D(0, 0)
+        };
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        mWidth = getMeasuredWidth();
+        mHeight = getMeasuredHeight();
 
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        int screenWith = getMeasuredWidth();
+        resolvePoints();
         int childCount = getChildCount();
-        DropOfWater water = (DropOfWater) getChildAt(0);
-        int childWidth =  water.getLayoutParams().width;
-        int margin = (screenWith - childCount*childWidth)/(childCount+1);
-        int left,right,top,bottom;
-        for(int i=0;i<childCount;i++){
-            left = childWidth*i+margin*(i+1);
-            right = left + childWidth;
-            top = 0;
-            bottom = top+ water.getWaterHeight();
-            getChildAt(i).layout(left,top,right,bottom);
+        int margin = (mWidth - childCount * mChildWidth_PX) / (childCount + 1);
+        int left, right, top, bottom;
+        int centerX;
+        for (int i = 0; i < childCount; i++) {
+            DropOfWater water = (DropOfWater) getChildAt(i);
+            left = mChildWidth_PX * i + margin * (i + 1);
+            right = left + mChildWidth_PX;
+            centerX = left + mChildWidth_PX / 2;
+            top = (int) getBerizerCurrentY(centerX / mWidth) + mConstantDistance_PX;
+            bottom = top + water.getWaterHeight();
+            getChildAt(i).layout(left, top, right, bottom);
         }
     }
 
-    public void drag(float f){
-        for(int i = 0;i<getChildCount();i++){
+    public void drag(float f) {
+        if (mIsRun) {
+            mDragOutAnimator.cancel();
+        }
+        mCurrentBerizerHeight = (int) (mMaxBerizerHeight_PX * f);
+        for (int i = 0; i < getChildCount(); i++) {
             DropOfWater water = (DropOfWater) getChildAt(i);
             water.drag(f);
         }
     }
 
-    public void dragOut(){
-        for(int i = 0;i<getChildCount();i++){
+    public void dragOut() {
+        final int currentBerzieHeight = mCurrentBerizerHeight;
+        mDragOutAnimator = ValueAnimator.ofFloat(1, 0);
+        mDragOutAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mCurrentBerizerHeight = (int) (currentBerzieHeight * (Float) animation.getAnimatedValue());
+            }
+        });
+        mDragOutAnimator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                super.onAnimationCancel(animation);
+                mIsRun = false;
+            }
+
+            @Override
+            public void onAnimationStart(Animator animation) {
+                super.onAnimationStart(animation);
+                mIsRun = true;
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                mIsRun = false;
+            }
+        });
+        mDragOutAnimator.setDuration(500);
+        mDragOutAnimator.setInterpolator(new BounceInterpolator());
+        mDragOutAnimator.start();
+
+        for (int i = 0; i < getChildCount(); i++) {
             DropOfWater water = (DropOfWater) getChildAt(i);
             water.dragOut();
         }
@@ -76,20 +143,39 @@ public class ArcViewGroup extends ViewGroup{
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int screeWidth = getMeasuredWidth();
         mPaint.setColor(Color.BLACK);
         mPaint.setStyle(Paint.Style.FILL);
-        canvas.save();
-
-
-        mShort_DP = screeWidth/2;
-        int translateHeight = (int) (mArcHeight_DP*getResources().getDisplayMetrics().density);
-        long r= ((translateHeight*translateHeight+mShort_DP*mShort_DP)/2*translateHeight);
-        canvas.translate(0,mArcHeight_DP-r);
-//        canvas.clipRect(0, r-translateHeight, screeWidth, r );
-        canvas.drawCircle(mShort_DP,0,r,mPaint);
-        canvas.restore();
-
-        System.out.println("------------------------");
+        mPath.reset();
+        mPath.moveTo(0, 0);
+        mPath.quadTo(mWidth / 2, 0, mWidth, 0);
+        mPath.lineTo(mWidth, getBerizerCurrentY(0.5f));
+        mPath.lineTo(0, getBerizerCurrentY(0.5f));
+        mPath.lineTo(0, 0);
+        canvas.drawPath(mPath, mPaint);
     }
+
+    class Point2D {
+        public float x;
+        public float y;
+
+        Point2D(float x, float y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    private float getBerizerCurrentY(float t) {
+        float a1 = (float) ((1.0 - t) * (1.0 - t) * mPoints2D[0].y);
+        float a2 = (float) (2.0 * t * (1 - t) * mPoints2D[1].y);
+        float a3 = t * t * mPoints2D[2].y;
+        return a1 + a2 + a3;
+    }
+
+    private void resolvePoints() {
+        mPoints2D[1].x = mWidth / 2;
+        mPoints2D[1].y = mCurrentBerizerHeight;
+        mPoints2D[2].x = mWidth;
+        mPoints2D[2].y = 0;
+    }
+
 }

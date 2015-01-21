@@ -47,6 +47,7 @@ public class CanvasDraw extends Activity {
                     float f = deltaY > 500 ? 1.0f : deltaY / 500f;
                     waterGroup.drag(f);
                 }
+                System.out.println(event.getY()+"");
                 break;
             case MotionEvent.ACTION_UP:
                 waterGroup.dragOut();

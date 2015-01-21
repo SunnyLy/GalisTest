@@ -12,4 +12,11 @@
         <attr name="tag_text_size" format="dimension"/>
         <attr name="tag_drawable" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="ArcViewGroup">
+        <attr name="is_need_draw_bg" format="boolean"/>
+        <attr name="berizer_height" format="dimension"/>
+        <attr name="constant_distance" format="dimension"/>
+        <attr name="child_width" format="dimension"/>
+    </declare-styleable>
 </resources>

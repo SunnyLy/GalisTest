@@ -47,7 +47,7 @@ public class DropOfWater extends View {
     private int mTagTextSize_SP;//字体大小
 
     public int getWaterHeight() {
-        return mCurrentHeight+mShort_DP+mTagMarginTop_Dp+mTagTextSize_SP;
+        return mCurrentHeight+mShort_DP+mTagMarginTop_Dp;
     }
 
     private RectF mOvalRectF;
@@ -79,7 +79,7 @@ public class DropOfWater extends View {
         mShort_DP = (int) typedArray.getDimension(R.styleable.DropOfWater_short_dp, 100f);//半短轴
         mCurrentHeight = mShort_DP;
 
-        mOvalRectF = new RectF(0, 0, mShort_DP, mLong_DP);
+        mOvalRectF = new RectF(0, 0, mShort_DP, mCurrentHeight);
         mClipCircleRectF = new RectF(0, 0, mShort_DP * 2, mShort_DP);
 
         mIsFill = typedArray.getBoolean(R.styleable.DropOfWater_fill, true);//是否填充
@@ -136,13 +136,14 @@ public class DropOfWater extends View {
         mPaint.setStyle(Paint.Style.FILL);
         canvas.save();
 
-        canvas.translate(0, mCurrentHeight + mShort_DP + mTagMarginTop_Dp);
+        canvas.translate(0, mCurrentHeight + mShort_DP +mTagMarginTop_Dp);
 
         mPaint.setColor(mTagTextColor);
         if (TextUtils.isEmpty(mTag)) {
             mTag = "test";
         }
         canvas.drawText(mTag, mShort_DP, 0, mPaint);
+        canvas.restore();
 
     }
 
