@@ -15,6 +15,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.galis.galistest.R;
+
 /**
  * Author: galis
  * Date: 2015/1/16 10:07
@@ -27,12 +29,14 @@ public class CanvasDraw extends Activity {
 
     private int mCurrentY;
     private ArcViewGroup waterGroup;
+    private ArcViewGroup waterGroup_top;
 
     @Override
     protected void onCreate(Bundle onSaveInstance) {
         super.onCreate(onSaveInstance);
-        waterGroup  = new ArcViewGroup(this);
-        setContentView(waterGroup);
+        setContentView(R.layout.activity_arc);
+        waterGroup = (ArcViewGroup) findViewById(R.id.arc_tag_bottom);
+        waterGroup_top = (ArcViewGroup) findViewById(R.id.arc_tag_top);
     }
 
     @Override
@@ -46,11 +50,13 @@ public class CanvasDraw extends Activity {
                 if (deltaY > 0) {
                     float f = deltaY > 500 ? 1.0f : deltaY / 500f;
                     waterGroup.drag(f);
+                    waterGroup_top.drag(f);
                 }
-                System.out.println(event.getY()+"");
+                System.out.println(event.getY() + "");
                 break;
             case MotionEvent.ACTION_UP:
                 waterGroup.dragOut();
+                waterGroup_top.dragOut();
                 break;
         }
         return true;

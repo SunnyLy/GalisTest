@@ -23,7 +23,7 @@ import com.galis.galistest.R;
  */
 
 
-public class ArcViewGroup extends FrameLayout {
+public class ArcViewGroup extends FrameLayout{
 
     private boolean mIsNeedToDrawBg = false;
     private int mConstantDistance_PX;//中心点到贝塞尔曲线的距离
@@ -85,7 +85,7 @@ public class ArcViewGroup extends FrameLayout {
             left = mChildWidth_PX * i + margin * (i + 1);
             right = left + mChildWidth_PX;
             centerX = left + mChildWidth_PX / 2;
-            top = (int) getBerizerCurrentY(centerX / mWidth) + mConstantDistance_PX;
+            top = mConstantDistance_PX + (int) getBerizerCurrentY(centerX / (mWidth*1.0f)) - water.getmLongHeight();
             bottom = top + water.getWaterHeight();
             getChildAt(i).layout(left, top, right, bottom);
         }
@@ -143,13 +143,17 @@ public class ArcViewGroup extends FrameLayout {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mPaint.setColor(Color.BLACK);
+        if(mIsNeedToDrawBg){
+            mPaint.setColor(Color.WHITE);
+        }else {
+            mPaint.setAlpha(0);
+        }
         mPaint.setStyle(Paint.Style.FILL);
         mPath.reset();
         mPath.moveTo(0, 0);
-        mPath.quadTo(mWidth / 2, 0, mWidth, 0);
-        mPath.lineTo(mWidth, getBerizerCurrentY(0.5f));
-        mPath.lineTo(0, getBerizerCurrentY(0.5f));
+        mPath.quadTo(mWidth / 2, mCurrentBerizerHeight, mWidth, 0);
+        mPath.lineTo(mWidth, mHeight);
+        mPath.lineTo(0, mHeight);
         mPath.lineTo(0, 0);
         canvas.drawPath(mPath, mPaint);
     }

@@ -1,7 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:arc="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="#ff0000ff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"></LinearLayout>
+
+    <com.galis.galistest.draw.ArcViewGroup
+        android:id="@+id/arc_tag_top"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        arc:berizer_height="60dp"
+        arc:child_width="40dp"
+        arc:constant_distance="80dp"
+        arc:is_need_draw_bg="false"
+        >
+
+        <com.galis.galistest.draw.DropOfWater
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            arc:background_color="@android:color/darker_gray"
+            arc:fill="false"
+            arc:long_dp="40dp"
+            arc:short_dp="20dp"
+            arc:tag="电灯"
+            arc:tag_drawable="@drawable/ic_launcher"
+            arc:tag_text_size="14sp"
+            arc:tag_margint_top="5dp"
+            arc:tag_text_color="@android:color/darker_gray"/>
+
+        <com.galis.galistest.draw.DropOfWater
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            arc:background_color="@android:color/darker_gray"
+            arc:fill="false"
+            arc:long_dp="40dp"
+            arc:short_dp="20dp"
+            arc:tag="电灯"
+            arc:tag_drawable="@drawable/ic_launcher"
+            arc:tag_text_size="14sp"
+            arc:tag_margint_top="5dp"
+            arc:tag_text_color="@android:color/darker_gray"/>
+
+        <com.galis.galistest.draw.DropOfWater
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            arc:background_color="@android:color/darker_gray"
+            arc:fill="false"
+            arc:long_dp="40dp"
+            arc:short_dp="20dp"
+            arc:tag="电灯"
+            arc:tag_drawable="@drawable/ic_launcher"
+            arc:tag_text_size="14sp"
+            arc:tag_margint_top="5dp"
+            arc:tag_text_color="@android:color/darker_gray"/>
+
+        <com.galis.galistest.draw.DropOfWater
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            arc:background_color="@android:color/darker_gray"
+            arc:fill="false"
+            arc:long_dp="40dp"
+            arc:short_dp="20dp"
+            arc:tag="电灯"
+            arc:tag_drawable="@drawable/ic_launcher"
+            arc:tag_text_size="14sp"
+            arc:tag_margint_top="5dp"
+            arc:tag_text_color="@android:color/darker_gray"/>
+
+    </com.galis.galistest.draw.ArcViewGroup>
+
+
+    <com.galis.galistest.draw.ArcViewGroup
+        android:id="@+id/arc_tag_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        arc:berizer_height="90dp"
+        arc:child_width="60dp"
+        arc:constant_distance="60dp"
+        arc:is_need_draw_bg="true"
+        >
+
+        <com.galis.galistest.draw.DropOfWater
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            arc:background_color="#ff00ffff"
+            arc:fill="true"
+            arc:long_dp="50dp"
+            arc:short_dp="30dp"
+            arc:tag="电灯"
+            arc:tag_drawable="@drawable/ic_launcher"
+            arc:tag_text_size="14sp"
+            arc:tag_margint_top="5dp"
+            arc:tag_text_color="@android:color/darker_gray"/>
+
+        <com.galis.galistest.draw.DropOfWater
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            arc:background_color="@android:color/darker_gray"
+            arc:fill="true"
+            arc:stroke_width="2px"
+            arc:long_dp="50dp"
+            arc:short_dp="30dp"
+            arc:tag="音响"
+            arc:tag_drawable="@drawable/ic_launcher"
+            arc:tag_text_size="14sp"
+            arc:tag_margint_top="5dp"
+            arc:tag_text_color="@android:color/darker_gray"/>
+
+        <com.galis.galistest.draw.DropOfWater
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            arc:background_color="#ffff5555"
+            arc:fill="true"
+            arc:long_dp="50dp"
+            arc:short_dp="30dp"
+            arc:tag="窗帘"
+            arc:tag_drawable="@drawable/ic_launcher"
+            arc:tag_text_size="14sp"
+            arc:tag_margint_top="5dp"
+            arc:tag_text_color="@android:color/darker_gray"/>
+    </com.galis.galistest.draw.ArcViewGroup>
 
 </LinearLayout>
