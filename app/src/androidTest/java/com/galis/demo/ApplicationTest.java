@@ -1,4 +1,4 @@
-package com.galis.galistest;
+package com.galis.demo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

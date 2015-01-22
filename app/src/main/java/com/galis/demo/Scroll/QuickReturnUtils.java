@@ -1,4 +1,4 @@
-package com.galis.galistest.Scroll;
+package com.galis.demo.Scroll;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

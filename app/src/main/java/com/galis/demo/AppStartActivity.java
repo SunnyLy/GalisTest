@@ -1,4 +1,4 @@
-package com.galis.galistest;
+package com.galis.demo;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -14,12 +14,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.galis.galistest.Matrix.MatrixActivity;
-import com.galis.galistest.Scroll.PullScrollActivity;
-import com.galis.galistest.Scroll.ScrollActivity;
-import com.galis.galistest.draw.CalTimeActivity;
-import com.galis.galistest.draw.CanvasDraw;
-import com.galis.galistest.tag.TagActivity;
+import com.galis.demo.Matrix.MatrixActivity;
+import com.galis.demo.Scroll.PullScrollActivity;
+import com.galis.demo.Scroll.ScrollActivity;
+import com.galis.demo.draw.CalTimeActivity;
+import com.galis.demo.draw.CanvasDraw;
+import com.galis.demo.tag.TagActivity;
 
 import java.util.LinkedList;
 

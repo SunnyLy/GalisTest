@@ -1,4 +1,4 @@
-package com.galis.galistest.popup;
+package com.galis.demo.popup;
 
 import android.app.Activity;
 import android.content.Context;

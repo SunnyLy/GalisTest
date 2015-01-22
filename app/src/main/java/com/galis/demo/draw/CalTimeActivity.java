@@ -1,10 +1,10 @@
-package com.galis.galistest.draw;
+package com.galis.demo.draw;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
-import com.galis.galistest.utils.AppUtil;
+import com.galis.demo.utils.AppUtil;
 
 /**
  * Author: galis

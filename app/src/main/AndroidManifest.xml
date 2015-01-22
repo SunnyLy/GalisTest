@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.galis.galistest" >
+    package="com.galis.demo" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".AppStartActivity"
+            android:name="com.galis.demo.AppStartActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,12 +18,12 @@
         </activity>
 
 
-        <activity android:name=".tag.TagActivity" />
-        <activity android:name=".draw.CalTimeActivity" />
-        <activity android:name=".Matrix.MatrixActivity" />
-        <activity android:name=".Scroll.ScrollActivity" />
-        <activity android:name=".Scroll.PullScrollActivity" />
-        <activity android:name=".draw.CanvasDraw" />
+        <activity android:name="com.galis.demo.tag.TagActivity" />
+        <activity android:name="com.galis.demo.draw.CalTimeActivity" />
+        <activity android:name="com.galis.demo.Matrix.MatrixActivity" />
+        <activity android:name="com.galis.demo.Scroll.ScrollActivity" />
+        <activity android:name="com.galis.demo.Scroll.PullScrollActivity" />
+        <activity android:name="com.galis.demo.draw.CanvasDraw" />
     </application>
 
 </manifest>

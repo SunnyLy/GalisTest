@@ -1,4 +1,4 @@
-package com.galis.galistest.Scroll;
+package com.galis.demo.Scroll;
 
 /**
  * Author: galis

@@ -1,4 +1,4 @@
-package com.galis.galistest.Scroll;
+package com.galis.demo.Scroll;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import static com.galis.galistest.Scroll.QuickReturnListViewOnScrollListener.QuickReturnType.*;
+import static com.galis.demo.Scroll.QuickReturnListViewOnScrollListener.QuickReturnType.*;
 
 /**
  * Author: galis

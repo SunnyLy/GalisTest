@@ -1,4 +1,4 @@
-package com.galis.galistest.draw;
+package com.galis.demo.draw;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -13,7 +13,7 @@ import android.util.AttributeSet;
 import android.view.animation.BounceInterpolator;
 import android.widget.FrameLayout;
 
-import com.galis.galistest.R;
+import com.galis.demo.R;
 
 /**
  * Author: galis

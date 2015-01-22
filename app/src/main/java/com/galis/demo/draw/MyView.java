@@ -1,4 +1,4 @@
-package com.galis.galistest.draw;
+package com.galis.demo.draw;
 
 import android.content.Context;
 import android.util.AttributeSet;

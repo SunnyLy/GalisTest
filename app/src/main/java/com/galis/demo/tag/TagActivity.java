@@ -1,4 +1,4 @@
-package com.galis.galistest.tag;
+package com.galis.demo.tag;
 
 import android.app.Activity;
 import android.graphics.Color;

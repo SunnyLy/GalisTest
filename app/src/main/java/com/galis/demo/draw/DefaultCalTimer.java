@@ -1,4 +1,4 @@
-package com.galis.galistest.draw;
+package com.galis.demo.draw;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.galis.galistest.R;
-import com.galis.galistest.utils.AppUtil;
+import com.galis.demo.R;
+import com.galis.demo.utils.AppUtil;
 
 /**
  * Author: galis

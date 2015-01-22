@@ -1,4 +1,4 @@
-package com.galis.galistest.utils;
+package com.galis.demo.utils;
 
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningTaskInfo;

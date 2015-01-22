@@ -1,4 +1,4 @@
-package com.galis.galistest.tag;
+package com.galis.demo.tag;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.galis.galistest.R;
+import com.galis.demo.R;
 
 /**
  * Author: galis

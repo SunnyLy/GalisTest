@@ -1,9 +1,9 @@
-package com.galis.galistest.popup;
+package com.galis.demo.popup;
 
 import android.app.Dialog;
 import android.content.Context;
 
-import com.galis.galistest.R;
+import com.galis.demo.R;
 
 /**
  * Author: galis

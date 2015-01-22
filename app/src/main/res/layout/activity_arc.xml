@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"></LinearLayout>
 
-    <com.galis.galistest.draw.ArcViewGroup
+    <com.galis.demo.draw.ArcViewGroup
         android:id="@+id/arc_tag_top"
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -20,7 +20,7 @@
         arc:is_need_draw_bg="false"
         >
 
-        <com.galis.galistest.draw.DropOfWater
+        <com.galis.demo.draw.DropOfWater
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             arc:background_color="@android:color/darker_gray"
@@ -33,7 +33,7 @@
             arc:tag_margint_top="5dp"
             arc:tag_text_color="@android:color/darker_gray"/>
 
-        <com.galis.galistest.draw.DropOfWater
+        <com.galis.demo.draw.DropOfWater
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             arc:background_color="@android:color/darker_gray"
@@ -46,7 +46,7 @@
             arc:tag_margint_top="5dp"
             arc:tag_text_color="@android:color/darker_gray"/>
 
-        <com.galis.galistest.draw.DropOfWater
+        <com.galis.demo.draw.DropOfWater
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             arc:background_color="@android:color/darker_gray"
@@ -59,7 +59,7 @@
             arc:tag_margint_top="5dp"
             arc:tag_text_color="@android:color/darker_gray"/>
 
-        <com.galis.galistest.draw.DropOfWater
+        <com.galis.demo.draw.DropOfWater
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             arc:background_color="@android:color/darker_gray"
@@ -72,10 +72,10 @@
             arc:tag_margint_top="5dp"
             arc:tag_text_color="@android:color/darker_gray"/>
 
-    </com.galis.galistest.draw.ArcViewGroup>
+    </com.galis.demo.draw.ArcViewGroup>
 
 
-    <com.galis.galistest.draw.ArcViewGroup
+    <com.galis.demo.draw.ArcViewGroup
         android:id="@+id/arc_tag_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -85,7 +85,7 @@
         arc:is_need_draw_bg="true"
         >
 
-        <com.galis.galistest.draw.DropOfWater
+        <com.galis.demo.draw.DropOfWater
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             arc:background_color="#ff00ffff"
@@ -98,7 +98,7 @@
             arc:tag_margint_top="5dp"
             arc:tag_text_color="@android:color/darker_gray"/>
 
-        <com.galis.galistest.draw.DropOfWater
+        <com.galis.demo.draw.DropOfWater
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             arc:background_color="@android:color/darker_gray"
@@ -112,7 +112,7 @@
             arc:tag_margint_top="5dp"
             arc:tag_text_color="@android:color/darker_gray"/>
 
-        <com.galis.galistest.draw.DropOfWater
+        <com.galis.demo.draw.DropOfWater
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             arc:background_color="#ffff5555"
@@ -124,6 +124,6 @@
             arc:tag_text_size="14sp"
             arc:tag_margint_top="5dp"
             arc:tag_text_color="@android:color/darker_gray"/>
-    </com.galis.galistest.draw.ArcViewGroup>
+    </com.galis.demo.draw.ArcViewGroup>
 
 </LinearLayout>

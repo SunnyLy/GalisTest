@@ -1,4 +1,4 @@
-package com.galis.galistest.Matrix;
+package com.galis.demo.Matrix;
 
 import android.app.Activity;
 import android.graphics.Matrix;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.galis.galistest.R;
+import com.galis.demo.R;
 
 /**
  * Author: galis
